@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  tags: string[];
+  url: string;
+}
+
+const { title, description, tags, url } = Astro.props;
+---
+
+<a href={url} target="_blank" rel="noopener noreferrer" class="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 card-hover-effect">
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+    <p class="font-normal text-gray-700 dark:text-gray-400">{description}</p>
+    <div class="flex flex-wrap mt-4">
+        {tags.map(tag => (
+            <span class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">{tag}</span>
+        ))}
+    </div>
+</a>
