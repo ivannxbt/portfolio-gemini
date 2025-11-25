@@ -1,50 +1,142 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import ExperienceCard from '../components/ExperienceCard.astro';
 ---
 
-<Layout title="AI Engineer">
+<Layout title="Iván Alfredo Caamaño Castañeda">
   <main class="container mx-auto px-4">
     <section class="text-center py-20">
-      <h1 class="text-5xl font-bold text-white">AI Engineer</h1>
+      <h1 class="text-5xl font-bold text-white">Iván Alfredo Caamaño Castañeda</h1>
+      <h2 class="text-2xl text-white mt-4">AI & Data Analyst / AI Engineer</h2>
+      <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">
+        Ingeniero en Telemática con experiencia en AI/ML, DevOps, Software y Data Engineering. Especializado en agentes de IA, RAG, modelos de deep learning y automatización avanzada en AWS y Azure.
+      </p>
       <div class="mt-8">
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="bg-gray-800 text-white font-bold py-2 px-4 rounded hover:bg-gray-700">GitHub</a>
+        <a href="https://github.com/ivanncaamano" target="_blank" rel="noopener noreferrer" class="bg-gray-800 text-white font-bold py-2 px-4 rounded hover:bg-gray-700">GitHub</a>
+        <a href="https://twitter.com/ivannxbt" target="_blank" rel="noopener noreferrer" class="ml-4 bg-gray-800 text-white font-bold py-2 px-4 rounded hover:bg-gray-700">X/Twitter</a>
         <a href="#" class="ml-4 bg-gray-800 text-white font-bold py-2 px-4 rounded hover:bg-gray-700">CV</a>
       </div>
+    </section>
+
+    <section class="py-20">
+      <h2 class="text-3xl font-bold text-white mb-8">About Me</h2>
+      <p class="text-lg text-gray-400 max-w-4xl mx-auto">
+        Profesional con sólida formación en ingeniería y experiencia práctica desarrollando soluciones de IA de alto impacto. Combina conocimientos en ML, software, automatización, cloud y sistemas distribuidos para crear productos que reducen tiempos, mejoran eficiencia y escalan en producción. Mantiene un enfoque práctico, actualizado y orientado a resultados, con capacidad para colaborar con equipos técnicos y de negocio.
+      </p>
+    </section>
+
+    <section class="py-20">
+      <h2 class="text-3xl font-bold text-white mb-8">Experience</h2>
+      <ExperienceCard
+        company="Avvale"
+        role="AI & Data Analyst"
+        location="Madrid, España"
+        period="Marzo 2025 – Actual"
+        tasks={[
+          'Diseñó y desplegó un agente de generación documental con IA en AWS, automatizando por completo 4 tipos de documentos dinámicos (reducción del 95% del esfuerzo manual).',
+          'Optimizó prompting y sistemas RAG para un chatbot especializado en un entorno Azure, reduciendo un 90% la latencia de recuperación de información.',
+          'Desarrolló una solución de visión artificial para segmentar y analizar imágenes de lomo de res mediante Deep Learning, mejorando la consistencia de clasificación en un 80%.'
+        ]}
+      />
+      <ExperienceCard
+        company="NFQ Advisory Services"
+        role="Software Associate Consultant"
+        location="Madrid, España"
+        period="Ene 2025 – Mar 2025"
+        tasks={[
+          'Parte del equipo de Riesgos de BBVA desarrollando procesos del IMM (Internal Model Method).',
+          'Analizó, diseñó e implementó soluciones software en 4 procesos usando Python, Java y Unix.',
+          'Automatizó la ejecución de procesos batch del IMM, reduciendo intervención manual y tiempos de ejecución mediante iteración y feedback continuo.'
+        ]}
+      />
+      <ExperienceCard
+        company="Indra"
+        role="Defense & Security Systems Intern"
+        location="Madrid, España"
+        period="Sept 2021 – Jul 2022"
+        tasks={[
+          'Coordinación con un equipo de +10 personas para la digitalización de radares AESA del Eurofighter.',
+          'Desarrollo y optimización de 2 modelos ML para procesamiento de datos radar (detección de patrones, reducción de ruido) con TensorFlow y PyTorch.',
+          'Apoyo en integración de soluciones de procesamiento en tiempo real, aumentando rendimiento un 20%.'
+        ]}
+      />
     </section>
 
     <section>
       <h2 class="text-3xl font-bold text-white mb-8">Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <ProjectCard
-          title="Project 1"
-          description="A brief description of project 1."
-          tags={['Astro', 'Tailwind', 'JavaScript']}
-          url="https://github.com"
+          title="Agente de generación documental con IA (AWS)"
+          description="Automatiza 4 tipos de documentos dinámicos. Reemplaza 95% de trabajo manual."
+          tags={['Agentes', 'LLMs', 'Pipelines', 'AWS']}
+          url="#"
         />
         <ProjectCard
-          title="Project 2"
-          description="A brief description of project 2."
-          tags={['React', 'Node.js', 'Express']}
-          url="https://github.com"
+          title="Chatbot RAG especializado (Azure)"
+          description="Latencia reducida 90%. Infraestructuras Azure + vector stores. Prompts optimizados."
+          tags={['Azure', 'Vector Stores', 'RAG']}
+          url="#"
         />
         <ProjectCard
-          title="Project 3"
-          description="A brief description of project 3."
-          tags={['Python', 'Django', 'PostgreSQL']}
-          url="https://github.com"
+          title="Deep Learning para visión artificial (carnes)"
+          description="Aumento +80% consistencia. Modelos CNN / segmentación. Workflow full ML."
+          tags={['Deep Learning', 'Computer Vision', 'CNN']}
+          url="#"
         />
       </div>
     </section>
 
     <section class="py-20">
       <h2 class="text-3xl font-bold text-white mb-8">Skills</h2>
-      <div class="flex flex-wrap">
-        <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Astro</span>
-        <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Tailwind CSS</span>
-        <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">JavaScript</span>
-        <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">React</span>
-        <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Node.js</span>
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold text-white mb-4">Lenguajes de programación</h3>
+        <div class="flex flex-wrap">
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Python</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">SQL</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">JavaScript</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Java</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">R</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Scala</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Golang</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Solidity</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Rust</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Swift</span>
+        </div>
+      </div>
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold text-white mb-4">Frameworks y librerías</h3>
+        <div class="flex flex-wrap">
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">PyTorch</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">TensorFlow</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Keras</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">LangChain</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">MLFlow</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Pandas</span>
+        </div>
+      </div>
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold text-white mb-4">Áreas de AI/Data</h3>
+        <div class="flex flex-wrap">
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Deep Learning</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Computer Vision</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Prompt Engineering</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">RAG</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Data Engineering</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">MCP</span>
+        </div>
+      </div>
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold text-white mb-4">Cloud & Software</h3>
+        <div class="flex flex-wrap">
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">AWS</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Azure</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Docker</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Kubernetes</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Git</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Linux</span>
+          <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 mb-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Databricks</span>
+        </div>
       </div>
     </section>
   </main>
